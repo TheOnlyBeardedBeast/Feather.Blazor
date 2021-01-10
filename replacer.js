@@ -20,7 +20,9 @@ icons.forEach(icon => {
     .replace('width="24"', 'width="@Size"')
     .replace('height="24"', 'height="@Size"')
     .replace('stroke="#fff"', 'stroke="@Color"')
-    .replace('stroke-width="1.5"', 'stroke-width="@StrokeWidth"');
+    .replace('stroke-width="1.5"', 'stroke-width="@StrokeWidth"')
+    .replace('class="feather', 'class="feather @CssClass')
+    .replace('xmlns="http://www.w3.org/2000/svg"', 'xmlns="http://www.w3.org/2000/svg" @attributes="IconAttributes"');
 
   fs.writeFileSync(outputFolder + newName,
     `@inherits Icon

@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Feather.Blazor
 {
@@ -13,5 +11,9 @@ namespace Feather.Blazor
         public float StrokeWidth { get; set; } = 1.5f;
         [Parameter]
         public int Size { get; set; } = 24;
+        [Parameter]
+        public string CssClass { get; set; }
+        [Parameter(CaptureUnmatchedValues = true)]
+        public Dictionary<string, object> IconAttributes { get; set; }
     }
 }
