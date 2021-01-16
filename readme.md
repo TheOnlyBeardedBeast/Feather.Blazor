@@ -21,11 +21,28 @@ In you blazor components use icons like in the following line
 ```
 ### Icon params
 
-| Param name  | Type   | Default value |
-|-------------|--------|---------------|
-| Color       | string | #ffffff       |
-| StrokeWidth | float  | 1.5f          |
-| Size        | int    | 24            |
+| Param name     | Type                       | Default value |
+|----------------|----------------------------|---------------|
+| CssClass       | string                     | -             |
+| Color          | string                     | #ffffff       |
+| IconAttributes | dictionary<string, object> | -             |
+| Size           | int                        | 24            |
+| StrokeWidth    | float                      | 1.5f          |
+
+`CssClass` parameter allows adding CSS classes to the list of standard icon's classes. E.g.:
+
+```
+<FeatherMenu CssClass="foo bar"/>
+```
+
+will result in the generation of the following classes list in the icon element:
+
+```
+class="feather foo bar feather-menu"
+```
+
+`IconAttributes` parameter allows adding other custom HTML-tag attributes following standard Blazor practices. More information can be found here:
+https://docs.microsoft.com/pl-pl/aspnet/core/blazor/components/?view=aspnetcore-5.0#attribute-splatting-and-arbitrary-parameters
 
 ### Info
 
